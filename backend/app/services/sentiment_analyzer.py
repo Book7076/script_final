@@ -357,21 +357,22 @@ class SentimentAnalyzer:
     ) -> str:
         """Create a human-readable summary sentence of the atmosphere."""
         prefix = f"For '{movie_title}', " if movie_title else ""
+        lead = "the" if prefix else "The"
         mood_str = " & ".join(mood_tags[:2]) if mood_tags else "intriguing"
 
         if sentiment_label == "Positive":
             return (
-                f"{prefix}the narrative evokes an uplifting and vibrant vibe "
+                f"{prefix}{lead} narrative evokes an uplifting and vibrant vibe "
                 f"({vibe_score}%), highlighted by {mood_str} themes."
             )
         elif sentiment_label == "Negative":
             return (
-                f"{prefix}the atmosphere leans dark, gritty, or melancholic "
+                f"{prefix}{lead} atmosphere leans dark, gritty, or melancholic "
                 f"({vibe_score}%), characterized by {mood_str} tones."
             )
         else:
             return (
-                f"{prefix}the mood maintains a balanced, contemplative tone "
+                f"{prefix}{lead} mood maintains a balanced, contemplative tone "
                 f"({vibe_score}%), emphasizing {mood_str} elements."
             )
 

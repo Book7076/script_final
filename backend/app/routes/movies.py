@@ -36,10 +36,8 @@ def _attach_sentiment_to_movies(movie_data: dict) -> dict:
     results = movie_data.get("results", [])
     for item in results:
         overview = item.get("overview", "")
-        # ส่ง overview ไปให้ SentimentAnalyzer คำนวณ
-        item["sentiment"] = sentiment_analyzer.analyze(
-            text=overview, movie_title=item.get("title")
-        )
+        # คำนวณ Sentiment จากเนื้อเรื่องย่อ (overview) โดยไม่นำชื่อเรื่องไปประมวลผล
+        item["sentiment"] = sentiment_analyzer.analyze(text=overview)
     return movie_data
 
 
@@ -113,11 +111,9 @@ def get_movie_profile(movie_id: int):
     if not details:
         raise HTTPException(status_code=404, detail="Movie not found.")
 
-    # 2. วิเคราะห์ Sentiment ของเนื้อเรื่องย่อหลัก (Overview)
+    # 2. วิเคราะห์ Sentiment ของเนื้อเรื่องย่อหลัก (Overview) โดยไม่นำชื่อเรื่องไปประมวลผล
     overview_text = details.get("overview", "")
-    details["sentiment"] = sentiment_analyzer.analyze(
-        text=overview_text, movie_title=details.get("title")
-    )
+    details["sentiment"] = sentiment_analyzer.analyze(text=overview_text)
 
     # 3. วิเคราะห์ Sentiment ของบทวิจารณ์จากผู้ชม/นักวิจารณ์ (Reviews) แต่ละชิ้น
     for review in details.get("reviews", []):

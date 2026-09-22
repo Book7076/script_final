@@ -85,6 +85,11 @@ scrpit_final/
 │   ├── package.json
 │   ├── vite.config.js
 │   └── tailwind.config.js
+├── sprints/
+│   ├── sprint-1/              # Sprint 1 Documentation & Notebook (Pitch, Architecture, 12 Use Cases)
+│   ├── sprint-2/              # Sprint 2 Documentation & Notebook (FastAPI Core, TMDB, NLP tanh, Export)
+│   └── sprint-3/              # Sprint 3 Documentation & Notebook (Full-Stack Wiring, Edge Cases)
+├── CHANGELOG.md               # Keep a Changelog (Sprint 1-3 History & Role Rotations)
 └── README.md
 ```
 
@@ -132,17 +137,31 @@ scrpit_final/
 
 ## 10. Team Roles & Responsibilities
 
-| Role | Name / Assignee | Responsibilities |
+| สมาชิกทีม | หน้าที่หลักตามสถาปัตยกรรม | ความรับผิดชอบหลักในโครงการ |
 | :--- | :--- | :--- |
-| **Project Lead & System Architect** | Team Member 1 | ออกแบบสถาปัตยกรรมระบบโดยรวม (Full-Stack), วางโครงสร้าง OOP Classes (`TMDBClient`, `WatchlistRepository`, `SentimentAnalyzer`), และควบคุม Evaluation Checklist |
-| **Backend Developer & Database Engineer** | Team Member 2 | พัฒนา RESTful API ด้วย FastAPI, วางฐานข้อมูล SQLite ด้วย SQLAlchemy, จัดการ Data Persistence, และพัฒนาระบบ Export CSV/JSON |
-| **AI / NLP & Data Analytics Engineer** | Team Member 3 | ออกแบบระบบ Sentiment Analysis และ Atmosphere Vibe Engine, พัฒนาระบบคำนวณสถิติ Dynamic Watch Statistics และจัดทำ Sentiment Studio |
-| **Frontend Developer & UI/UX Designer** | Team Member 4 | พัฒนาส่วนติดต่อผู้ใช้ด้วย React + Tailwind CSS สไตล์ Cinematic Dark-Mode, ออกแบบคอมโพเนนต์ Discover, MovieDetailModal, และ Watchlist Manager |
-| **QA Engineer & DevOps Specialist** | Team Member 5 | เขียนชุดการทดสอบ Unit Test & Integration Test ด้วย `pytest`, ตรวจสอบมาตรฐาน PEP 8 ด้วย `flake8`, และตั้งค่า CI/CD Pipeline ด้วย GitHub Actions |
+| **บวรนันต์ ตะบองทอง** | **Chief Systems Architect / Full-Stack** | ออกแบบสถาปัตยกรรมระบบโดยรวม (Full-Stack), วางโครงสร้าง OOP Classes (`TMDBClient`, `WatchlistRepository`, `SentimentAnalyzer`), และควบคุม Definition of Done (DoD) |
+| **กิตติธัช ปลั่งกลาง** | **Infrastructure Lead / Full-Stack Coder** | บริหารจัดการ GitHub Repository, ตั้งค่า CI/CD Pipeline ผ่าน GitHub Actions, ร่วมพัฒนา React Frontend และระบบ Sentiment $\tanh$ |
+| **ไชยวัฒน์ แจ่มกลาง** | **Backend Engine & QA Debugger** | พัฒนา RESTful API ด้วย FastAPI, เชื่อมต่อ TMDB API v3, วางฐานข้อมูล SQLite ด้วย SQLAlchemy, จัดการ Data Persistence และชุดทดสอบ Edge Cases |
+| **กุลศยา จันภูงา** | **Frontend UI/UX & Quality Coordinator** | ออกแบบและพัฒนาส่วนติดต่อผู้ใช้ด้วย React + Tailwind CSS สไตล์ Cinematic Dark-Mode, ออกแบบคอมโพเนนต์ Discover, Modal, Watchlist และควบคุมคุณภาพการส่งมอบ |
 
 ---
 
-## 11. Setup & Execution Guide
+## 11. Sprint Documentation & Changelog
+
+โครงการนี้ได้รับการพัฒนาตามกระบวนการ Agile/Scrum ทั้งหมด 3 Sprints โดยมีการจัดระเบียบเอกสารและสมุดงานอย่างชัดเจนในโฟลเดอร์ `sprints/`:
+
+| Sprint | ช่วงเวลา / วันส่งงาน | หัวข้อและเป้าหมายหลัก | เอกสารรายงานฉบับสมบูรณ์ | ไฟล์สมุดงาน (.ipynb) |
+| :---: | :---: | :--- | :---: | :---: |
+| **Sprint 1** | 18 กันยายน 2569 | **Pitch, Architecture & Foundation**<br>• นิยาม 12 Use Cases (10 MVP + 2 Stretch)<br>• สถาปัตยกรรม 3 เลเยอร์ & CI/CD Pipeline | [📄 อ่านรายงาน Sprint 1](file:///c:/Users/TCcomputer/Desktop/scrpit_final/sprints/sprint-1/README.md) | [IMDB_at_home_sprint1.ipynb](file:///c:/Users/TCcomputer/Desktop/scrpit_final/sprints/sprint-1/IMDB_at_home_sprint1.ipynb) |
+| **Sprint 2** | 25 กันยายน 2569 | **Back-End Engine & Business Logic**<br>• FastAPI Core, TMDB Client & Resilience Fallback<br>• NLP Sentiment Engine ($\tanh$ 0–100%) & Export | [📄 อ่านรายงาน Sprint 2](file:///c:/Users/TCcomputer/Desktop/scrpit_final/sprints/sprint-2/README.md) | [IMDB_at_home_sprint2.ipynb](file:///c:/Users/TCcomputer/Desktop/scrpit_final/sprints/sprint-2/IMDB_at_home_sprint2.ipynb) |
+| **Sprint 3** | 2 ตุลาคม 2569 | **Full-Stack Integration & Edge Case Resilience**<br>• Full-Stack Wiring (React UI + FastAPI)<br>• Auto-Recovery DB, Boundary Protection, Pytest 100% | [📄 อ่านรายงาน Sprint 3](file:///c:/Users/TCcomputer/Desktop/scrpit_final/sprints/sprint-3/README.md) | [IMDB_at_home_sprint3.ipynb](file:///c:/Users/TCcomputer/Desktop/scrpit_final/sprints/sprint-3/IMDB_at_home_sprint3.ipynb) |
+
+> 📜 **บันทึกประวัติการพัฒนาโดยละเอียด (Changelog):**  
+> ติดตามรายการสิ่งที่เพิ่มเข้ามา (Added), การแก้ไข (Fixed), และการหมุนเวียนบทบาท (Role Rotation) ได้ที่ [CHANGELOG.md](file:///c:/Users/TCcomputer/Desktop/scrpit_final/CHANGELOG.md)
+
+---
+
+## 12. Setup & Execution Guide
 
 ### ความต้องการของระบบ (Prerequisites)
 - **Python**: 3.10 หรือใหม่กว่า
@@ -223,7 +242,7 @@ scrpit_final/
 
 ---
 
-## 12. API Reference Summary
+## 13. API Reference Summary
 
 | Method | Endpoint | Description |
 | :--- | :--- | :--- |
