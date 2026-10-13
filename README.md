@@ -90,8 +90,13 @@ scrpit_final/
 │   ├── sprint-2/              # Sprint 2 Documentation & Notebook (FastAPI Core, TMDB, NLP tanh, Export)
 │   └── sprint-3/              # Sprint 3 Documentation & Notebook (Full-Stack Wiring, Edge Cases)
 ├── CHANGELOG.md               # Keep a Changelog (Sprint 1-3 History & Role Rotations)
+├── PLAN.md                    # Final Architecture, Module/API Specs & End-User Guide
 └── README.md
 ```
+
+> 📘 **แผนสถาปัตยกรรมและข้อกำหนดฉบับสมบูรณ์ (Architecture Plan, API Specs & User Guide):**  
+> สามารถอ่านสถาปัตยกรรมระบบขั้นสุดท้าย ข้อกำหนดโมดูล/API Endpoints เชิงลึก และคู่มือการใช้งานสำหรับผู้ใช้อย่างละเอียดได้ที่ [PLAN.md](file:///c:/Users/TCcomputer/Desktop/scrpit_final/PLAN.md)
+
 
 ### รายละเอียดคลาสหลัก (Core OOP Classes)
 

@@ -1,3 +1,4 @@
+# ไฟล์นี้คือ API Main
 """Main FastAPI application entrypoint for IMDB at home.
 
 จุดเริ่มต้นของเซิร์ฟเวอร์ Backend (FastAPI Application Entrypoint)
