@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: imdb-home-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.12
+      - key: TMDB_API_KEY
+        value: 20349138876043462cff35f53d0969df
+      - key: CORS_ORIGINS
+        value: https://book7076.github.io,http://localhost:5173,http://localhost:3000
+      - key: DATABASE_URL
+        value: sqlite:///./imdb_home.db
